@@ -3,24 +3,21 @@ import styled from 'styled-components'
 
 const SignUpButton = styled.a`
   margin-right: 5vw;
-  padding: 10px 20px;
-  border: 3px solid #9326ff;
+  padding: 8px 15px;
+  border: 2px solid #9326ff;
   border-radius: 5px;
-  font-size: 25px;
+  font-size: 16px;
   color: #9326ff;
   cursor: pointer;
-    &:hover {
-      transform: scale(1.02);
-    }
   float: right;
   margin-top: 30px;
 `
 
-function Header() {
+function Header(props) {
 
     return (
-      <div className="header">
-        <SignUpButton>Sign In / Sign Up</SignUpButton>
+      <div id='header' className="header">
+        <SignUpButton className='pulse-min' onClick={props.toggle}>Sign In / Sign Up</SignUpButton>
       </div>
     );
   }
