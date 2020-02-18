@@ -20,7 +20,7 @@ function App() {
       <Home />
       {
         showSignUp ? 
-        <SignUp />
+        <SignUp toggle={toggle}/>
         : null
       }
     </div>

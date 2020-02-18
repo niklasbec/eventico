@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components'
 
-function SignUp() {
+function SignUp(props) {
 
     return (
+      <div className='color-blur'>
       <div className="signup">
-        <div className='popup\_inner'>  
-        <h1>HELLO</h1>  
-        <button className='pulse'>close me</button>  
-      </div>  
+      <img onClick={props.toggle} className='close-form' src='https://image.flaticon.com/icons/svg/70/70287.svg' />
+        <h1>Sign Up for Eventico</h1>
+      </div>
       </div>
     );
   }

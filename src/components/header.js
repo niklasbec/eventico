@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 const SignUpButton = styled.a`
   margin-right: 5vw;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border: 2px solid #9326ff;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.3rem;
   color: #9326ff;
   cursor: pointer;
   float: right;
