@@ -6,14 +6,14 @@ function SignUp(props) {
   
   const toggleTrue = () => {
     props.setToggleSign(true)
-    document.getElementById("signIn").style.color = "rgba(141, 3, 141)";
+    document.getElementById("signIn").style.color = "rgb(110, 2, 110)";
     document.getElementById("signUp").style.color = "black";
   }
 
   const toggleFalse = () => {
     props.setToggleSign(false)
     document.getElementById("signIn").style.color = "black";
-    document.getElementById("signUp").style.color = "rgba(141, 3, 141)";
+    document.getElementById("signUp").style.color = "rgb(110, 2, 110)";
   }
 
     return (
