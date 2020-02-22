@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/header';
-import {Home} from './components/home';
+import {Home, CreateEvent} from './components/home';
 import SignUp from './components/signUp';
+import { Route } from 'react-router-dom'
+import CreateEvents from './components/createEvents'
 
 function App() {
 
@@ -11,7 +13,8 @@ function App() {
   const [formValues, setFormValues] = useState({
     username: "",
     password: "",
-    email: ""
+    email: "",
+    firstName: ""
   })
 
   const toggle = () => {
@@ -21,13 +24,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header toggle={toggle} />
-      <Home />
+      <Route exact path="/" render={(props) => <Home {...props} toggle={toggle} />} />
       {
         showSignUp ? 
         <SignUp formValues={formValues} setFormValues={setFormValues} toggleSign={toggleSign} setToggleSign={setToggleSign} toggle={toggle}/>
         : null
       }
+      <Route exact path="/create" render={(props) => <CreateEvents {...props} formValues={formValues} setFormValues={setFormValues} />}  />
     </div>
   );
 }
