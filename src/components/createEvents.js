@@ -14,6 +14,8 @@ const CEButton = styled.a`
   cursor: pointer;
   font-weight: 600;
   border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
   &:hover {
     background-position: right center;
 }
